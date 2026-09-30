@@ -1,0 +1,15 @@
+{
+  "name": "avantro-progress-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Construction progress dashboard for the Avantro Project (Tower A, Tower B, SAMM)",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "reseed": "node server/index.js --reseed",
+    "test": "node server/selftest.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

@@ -1,0 +1,14 @@
+# Render "Blueprint": New + > Blueprint > pick this repository. A persistent disk requires a paid instance type.
+services:
+  - type: web
+    name: avantro-dashboard
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/me
+    disk:
+      name: avantro-data
+      mountPath: /data
+      sizeGB: 2
+    envVars:
+      - key: AVANTRO_SEED
+        value: empty   # start with a blank project; the admin password is printed once in the service logs
